@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		@keyframes jumping
+		{
+			0%
+			{
+				transform: translate(0px,0px);
+				background: red;
+			}
+
+			100%
+			{
+				transform: translate(0px,-150px);
+				background: green;
+			}
+		}
+
+		.box-1
+		{
+			background-color: red;
+			color: yellow;
+			border:solid 1px black;
+			width: 150px;
+			height: 150px;
+			margin:200px auto 25px;
+			text-align: center;
+			line-height: 150px;
+			font-size: 2em;
+			border-radius: 50%;
+
+			/*animation-name: jumping;
+			animation-duration: 0.8s;
+			animation-timing-function: ease-out;
+			animation-delay: 0s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-play-state: running;*/
+			animation:jumping 0.8s ease-out 0s infinite alternate running;
+		}
+
+		.box-1:hover
+		{
+			animation-play-state: paused;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="box-1">
+		Box - 1
+	</div>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+</body>
+</html>

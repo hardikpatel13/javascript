@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		@font-face
+		{
+		    font-family: roboto;
+		    src: url(../fonts/Roboto-Regular.ttf);
+		}
+
+		table
+		{
+			background: #f5f3cb;
+		}
+
+		thead
+		{
+			background: #7f87ba;
+			color: white;
+			font-family: roboto;
+		}
+
+		tbody
+		{
+			font-family: roboto;
+		}
+
+		input, select
+		{
+			background: #f7f1e9;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function getproductlist(data)
+		{
+			var rate;
+
+			if (data==0)
+
+			alert("Product Value : " + data);
+
+			switch(data)
+			{
+				case '1':
+					rate = "150";
+					break;
+
+				case '2':
+					rate = "750";
+					break;
+
+				case '3':
+					rate = "1500";
+					break;
+
+				default:
+					rate ="";
+			}
+			document.getElementById('prate').value = rate;
+		}
+
+		function getproductlist1(data)
+		{
+			var rate;
+
+			if (data==0)
+
+			alert("Product Value : " + data);
+
+			switch(data)
+			{
+				case '1':
+					rate = "500";
+					break;
+
+				case '2':
+					rate = "100";
+					break;
+
+				case '3':
+					rate = "10000";
+					break;
+
+				default:
+					rate ="";
+			}
+			document.getElementById('rate').value = rate;
+		}
+
+		function getTotal(data)
+		{
+			var qauntity, amount, rate;
+
+			qauntity = document.getElementById("qauntity").value;
+          	rate = document.getElementById("prate").value;
+            document.getElementById("amount").value = qauntity * rate;
+		
+			var qauntity, amount, rate1;
+
+			qauntity = document.getElementById("qauntity2").value;
+          	rate1 = document.getElementById("rate").value;
+            document.getElementById("pamount").value = qauntity * rate1;
+            
+	        var amount = document.getElementById('amount').value;
+	        var pamount = document.getElementById('pamount').value;
+	        var total = parseFloat(amount)+parseFloat(pamount);
+	        document.getElementById('total').value = total;
+
+	        sgst =  parseFloat(total)*9/100;	     
+	        cgst =  parseFloat(total)*9/100;	     
+	        paybal = total+sgst+cgst;     
+	        
+	        document.getElementById('sgst').value = sgst;   
+	        document.getElementById('cgst').value = cgst;   
+	        document.getElementById('paybal').value = paybal;   
+		}
+	</script>
+</head>
+<body>
+
+	<table align="center" border="1" cellpadding="20" cellspacing="0">
+		<thead align="center">
+			<tr>
+				<td>Product Detils</td>
+				<td>Qauntity</td>
+				<td>Rate</td>
+				<td>Amount</td>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>
+					<select onchange="getproductlist(this.value)">
+						<option value="0">-Select One-</option>
+						<option value="1">Mouse</option>
+						<option value="2">Key Board</option>
+						<option value="3">Speaker</option>
+					</select>
+				</td>
+
+				<td>
+					<input onkeyup="getTotal(this.value)" type="text" name="qauntity" id="qauntity">
+				</td>
+
+				<td>
+					<input type="text" name="prate" id="prate" readonly="readonly">
+				</td>
+
+				<td>
+					<input type="text" name="amount" id="amount" readonly="readonly">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<select  onchange="getproductlist1(this.value)">
+						<option value="0">-Select One-</option>
+						<option value="1">Cover</option>
+						<option value="2">Screen Guard</option>
+						<option value="3">Cpu</option>
+					</select>
+				</td>
+
+				<td>
+					<input onkeyup="getTotal(this.value)" type="text" name="qauntity2" id="qauntity2">
+				</td>
+
+				<td>
+					<input type="text" name="rate" id="rate">
+				</td>
+
+				<td>
+					<input type="text" name="pamount" id="pamount">
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="3" align="right">Total Amount</td>
+				<td><input type="text" name="total" id="total" readonly="readonly"></td>
+			</tr>
+
+			<tr>
+				<td colspan="3" align="right">Output SGST 9%</td>
+				<td><input type="text" name="sgst" id="sgst" readonly="readonly"></td>
+			</tr>
+
+			<tr>
+				<td colspan="3" align="right">Output CGST 9%</td>
+				<td><input type="text" name="cgst" id="cgst" readonly="readonly"></td>
+			</tr>
+
+			<tr>
+				<td colspan="3" align="right">Total Payble Amount</td>
+				<td><input type="text" name="paybal" id="paybal" readonly="readonly"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

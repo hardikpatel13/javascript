@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: lightblue;
+        }
+        label
+        {
+            width:200px;
+            display: inline-block;
+            border: solid 0px black;
+        }
+        .margin-bottom
+        {
+            margin: 0px 0px 15px 0px ;
+        }
+        .margin-left
+        {
+            margin: 0px 0px 0px 200px ;
+        }
+        .box
+        {
+            border: solid 1px black;
+            height: 200px;
+            width: 1000px;
+            margin: 20px 0px 0px 0px;
+            padding: 15px;
+            overflow: auto;
+            position: relative;
+        }
+        .data-1
+        {
+            float: left;
+            border: solid 1px black;
+            border-width: 0px 1px 0px 0px;
+            padding: 0px 50px 0px 0px  ;
+        }
+        .data-2
+        {
+            float: right;
+        }
+        .data-3
+        {
+            border-bottom: 1px solid black;
+            width: 800px;
+            display: block;
+            padding: 150px 0px 0px 0px;
+        }
+        .data-4
+        {
+            padding: 20px 0px 0px 290px;
+        }
+        .box{
+            display: none;
+        }
+    </style>
+    <script text="javascript">
+        function getresult()
+        {
+            var salary,hra,da,ma,gs,pf,td,lic,ds,ns;
+            salary=parseInt(document.getElementById('bsno').value);
+            lic=parseInt(document.getElementById('licno').value);
+
+            hra=salary*50/100;
+            da=salary*117/100;
+            ma=salary*10/100;
+            gs=hra+da+ma+salary;
+            
+            document.getElementById('hrano').value=hra;
+            document.getElementById('dano').value=da;
+            document.getElementById('mano').value=ma;
+            document.getElementById('gsno').value=gs;
+
+            pf=salary*12/100;
+            td=salary*2/100;
+            ds=pf+td+lic;
+
+            document.getElementById('pfno').value=pf;
+            document.getElementById('tdno').value=td;
+            document.getElementById('licno1').value=lic;
+            document.getElementById('dsno').value=ds;
+
+            ns=gs-ds;
+            document.getElementById('nsno').value=ns;
+
+            document.getElementById('box').style.display="block";
+        }
+        function cleardata()
+        {
+            document.getElementById('idno').value="";
+            document.getElementById('enno').value="";
+            document.getElementById('bsno').value="";
+            document.getElementById('licno').value="";
+            document.getElementById('box').style.display="none";
+        }
+    </script>
+</head>
+<body>
+    <div class="margin-bottom">
+        <label>Employee ID Number : </label><input type="text"  class="text-control" name="idno" id="idno">
+    </div>
+    <div class="margin-bottom">
+        <label>Employee Name : </label><input type="text" class="text-control" name="enno" id="enno">
+    </div>
+    <div class="margin-bottom">
+        <label>Basic Salary: </label><input type="text"  class="text-control" name="bsno" id="bsno">
+    </div>
+    <div class="margin-bottom">
+        <label>LIC Premium: </label><input type="text"  class="text-control" name="licno" id="licno">
+    </div>
+    <div class="margin-left">
+        <label> <input type="button" value="Get Salary" onclick="getresult()" ondblclick="cleardata()"></label>
+    </div>
+
+    <div class="box" id="box">
+        <div class="data-1">
+            <div class="margin-bottom">
+                <label>House Rent Allowance: </label><input type="text"  class="text-control" name="hrano" id="hrano">
+            </div>
+            <div class="margin-bottom">
+                <label>Dearness Allowance: </label><input type="text" class="text-control" name="dano" id="dano">
+            </div>
+            <div class="margin-bottom">
+                <label>Medical Allowance : </label><input type="text"  class="text-control" name="mano" id="mano">
+            </div>
+            <div class="margin-bottom">
+                <label>Gross Salary : </label><input type="text"  class="text-control" name="gsno" id="gsno">
+            </div>
+        </div>
+        <div class="data-2">
+            <div class="margin-bottom">
+                <label>Providund Fund : </label><input type="text"  class="text-control" name="pfno" id="pfno">
+            </div>
+            <div class="margin-bottom">
+                <label>Tax Deducted Source : </label><input type="text" class="text-control" name="tdno" id="tdno">
+            </div>
+            <div class="margin-bottom">
+                <label>LIC premium: </label><input type="text"  class="text-control" name="licno1" id="licno1">
+            </div>
+            <div class="margin-bottom">
+                <label>Diduction Salary: </label><input type="text"  class="text-control" name="dsno" id="dsno">
+            </div>
+        </div>
+        <div class="data-3"></div>
+        <div class="data-4">
+            Net Salary : <input type="text"  class="text-control" value="" name="nsno" id="nsno">
+        </div>
+    </div>
+</body>
+</html>

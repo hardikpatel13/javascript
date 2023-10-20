@@ -1,0 +1,24 @@
+@media all and (max-width: 500px)
+{
+	header, nav, main, footer
+	{
+		border:solid 1px black;
+		border-width:1px 0px;
+		padding: 20px 0px;
+		width: 100%;
+	}
+
+	nav ul
+	{
+		text-align: center;
+	}
+	nav li
+	{
+		float: none;
+	}
+	nav a
+	{
+		margin: 15px 0px;
+		display: block;
+	}
+}

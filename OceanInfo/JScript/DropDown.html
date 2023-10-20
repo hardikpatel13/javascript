@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p>
+		Registration Date 	:		<select>
+										<option>-Select Day-</option>
+										<script type="text/javascript">
+											var x=1;
+
+											while(x<=31)
+											{
+												document.write("<option>" + x + "</option>");
+												x++;
+											}
+										</script>
+									</select> 
+
+
+									<select>
+										<option>-Select Month-</option>
+										<script type="text/javascript">
+											var x=1;
+
+											while(x<=12)
+											{
+												document.write("<option>" + x + "</option>");
+												x++;
+											}
+										</script>
+									</select>
+
+
+									<select>
+										<option value="0">-Select Year-</option>
+										<script type="text/javascript">
+											var x;
+
+											for(x=2050; x>=1900; x--)
+											{
+												document.write("<option>" + x + "</option>");
+											}
+										</script>
+									</select>
+	</p>
+
+	<p id="rdate">
+		Your Registeration Date Here
+	</p>
+
+</body>
+</html>

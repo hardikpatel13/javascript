@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*
+		{
+			margin: 0px;
+			padding: 0px;
+			transition: all 0.3s ease 0s;
+		}
+
+		.fix-width
+		{
+			width: 80%;
+			border:solid 0px black;
+			margin: 0px auto;
+		}
+
+
+		.primary-menu-area
+		{
+			background: yellowgreen;
+			height: 50px;
+			width: 100%;
+			margin: 25px 0px;
+		}
+
+		.primary-menu ul
+		{
+			list-style-type: none;
+		}
+
+		.primary-menu li
+		{
+			float: left;
+		}
+
+		.primary-menu a
+		{
+			padding: 0px 25px;
+			text-decoration: none;
+			font-weight: bold;
+			color: #292929;
+			line-height: 50px;
+			display: block;
+		}
+
+		.primary-menu a:hover
+		{
+			background: #292929;
+			color: yellowgreen;
+		}
+
+		.primary-menu ul ul
+		{
+			position: absolute;
+			background: yellowgreen;
+			display: none;
+		}
+
+		.primary-menu ul ul li
+		{
+			float: none;
+		}
+
+		.primary-menu ul li:hover ul
+		{
+			display: block;
+		}
+
+		.sidebar
+		{
+			float: left;
+			width: 30%;
+			box-sizing: border-box;
+		}
+
+		.sidebar h2
+		{
+			background: yellowgreen;
+			padding: 10px;
+			font-weight: normal;
+			text-align: center;
+			font-size: 1.3em;
+			color: white;
+		}
+
+		.sidebar-menu
+		{
+			
+		}
+
+		.sidebar-menu ul
+		{
+			list-style-type: none;
+		}
+
+		.sidebar-menu a
+		{
+			text-decoration: none;
+			background-color: #d8e8b0;
+			display: block;
+			padding: 15px 10px;
+			border:dashed 1px yellowgreen;
+			border-width: 0px 0px 1px 0px;
+			color: #2b2b2b;
+		}
+
+		.sidebar-menu a:hover
+		{
+			background-color: #2b2b2b;			
+			color: #d8e8b0;
+			padding-left: 30px; 
+		}
+
+		.content
+		{
+			float: right;
+			width: 70%;
+			box-sizing: border-box;
+			padding: 0px 25px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="fix-width">
+		<h2>Welcome to Our Site</h2>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+
+		<div class="primary-menu-area">
+			<div class="fix-width">
+				<nav class="primary-menu">
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">About Us</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">India Tour Package</a>				
+							<ul>
+								<li><a href="">Kashmir Tour Package</a></li>
+								<li><a href="">Kerala Tour Package</a></li>
+								<li><a href="">Rajshthan Tour Package</a></li>
+								<li><a href="">Maharshtra Tour Package</a></li>
+								<li><a href="">Gujarat Tour Package</a></li>
+								<li><a href="">Himachal Tour Package</a></li>
+								<li><a href="">Others Tour Package</a></li>
+							</ul>
+						</li>
+						<li><a href="">Testimonial</a></li>
+						<li><a href="">Contact Us</a>
+							<ul>
+								<li><a href="">Head Office</a></li>
+								<li><a href="">Corporate Office</a></li>
+								<li><a href="">Training Centre</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+
+		<div class="fix-width">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+	</div>
+
+	<br><br>
+
+
+	<div class="fix-width">
+		<aside class="sidebar">
+			<h2>India Tour Packages</h2>
+			<nav class="sidebar-menu">
+				<ul>
+					<li><a href="">Goa Tour</a></li>
+					<li><a href="">Himachal Tour</a></li>
+					<li><a href="">Kashmir Tour</a></li>
+					<li><a href="">Rajshtan Tour</a></li>
+					<li><a href="">Gujarat Tour</a></li>
+					<li><a href="">Maharshtra Tour</a></li>
+					<li><a href="">Other City Tour</a></li>
+				</ul>
+			</nav>
+		</aside>
+
+		<div class="content">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+	</div>
+
+
+</body>
+</html>

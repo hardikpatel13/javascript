@@ -1,0 +1,75 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	transition: all 0.3s ease 0s;
+}
+
+body
+{
+	background-color:yellow;
+}
+
+/*id selector*/
+#event
+{
+	background-color: pink;
+	border: solid 1px black;
+	padding: 20px;
+	margin:15px 0px;
+}
+
+
+/*class selector*/
+.overview
+{
+	background-color: yellowgreen;
+	border: solid 1px black;
+	padding: 20px;
+	margin:15px 0px;
+}
+
+.overview:hover
+{
+	cursor: pointer;
+	background: green;
+}
+
+.overview:hover h2
+{
+	color: yellow;
+}
+
+.overview:hover h3
+{
+	color: white;
+}
+
+.overview p
+{
+	color: white;
+	line-height: 30px;
+	text-align: justify;
+}
+
+h2, h1, h3, h4
+{
+	text-align: center;
+	color: red;
+	font-weight: normal;
+	font-family: Cambria;
+}
+
+#event h2
+{
+	border:dashed 1px black;
+	border-width: 0px 0px 1px 0px;
+	padding: 0px 0px 10px 0px;
+}
+
+.three-col
+{
+	column-count: 3;
+	column-gap: 50px;
+	column-rule: dashed 1px yellow;
+}

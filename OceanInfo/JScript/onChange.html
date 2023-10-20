@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		function getcourseinfo(data)
+		{
+			var coursename, coursefees;
+
+			// if (data==0) 
+			// {
+			// 	alert("Course Value : " + data);
+			// }
+
+				switch(data)
+				{
+					case 'c-101':
+						coursename = "Certificate in Computer Concepts";
+						coursefees = "4000";
+						break;
+
+					case 'c-102':
+						coursename = "Diploma in Graphics Multi-Linugal Desktop Publishing";
+						coursefees = "15000";
+						break;
+
+					case 'c-103':
+						coursename = "Post Graduate in Diploma Computer Application";
+						coursefees = "45000";
+						break;
+
+					default:
+						coursename = "";
+						coursefees = "";
+				}
+
+
+				document.getElementById('cname').value = coursename;
+				document.getElementById('cfee').value = coursefees;
+		}
+
+	</script>
+</head>
+<body>
+
+	<p>
+		Course Code 	:	<select id="ccode" name="ccode" onchange="getcourseinfo(this.value)">
+								<option value="0">-Select One-</option>
+								<option value="c-101">CCC</option>
+								<option value="c-102">DGMDP</option>
+								<option value="c-103">PGDCA</option>
+							</select>
+	</p>
+
+	<p>
+		Course Name 	:	<input type="text" name="cname" id="cname" size="50" readonly="readonly">
+	</p>
+
+	<p>
+		Course Fees 	:	<input type="text" name="cfee" id="cfee" size="5" readonly="readonly">
+	</p>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.theme-box
+		{
+			margin: 15px;
+			border: solid 0px black;
+			padding: 15px;
+		}
+
+		.theme-1, .theme-2, .theme-3 
+		{
+			width: 50px;
+			height: 50px;
+			border:solid 1px black;
+			display: inline-block;
+			margin:0px 5px; 
+		}
+
+		.theme-1
+		{
+			background: yellowgreen;
+		}
+
+		.theme-2
+		{
+			background: pink;
+		}
+
+		.theme-3
+		{
+			background: red;
+		}
+	</style>
+	<script type="text/javascript">
+		function changetheme1()
+		{
+			document.bgColor="yellowgreen";
+			document.fgColor="green";
+		}
+
+		function changetheme2()
+		{
+			document.bgColor="pink";
+			document.fgColor="red";
+		}
+
+		function changetheme3()
+		{
+			document.bgColor="red";
+			document.fgColor="white";
+		}
+
+		function changenormal()
+		{
+			document.bgColor="white";
+			document.fgColor="black";
+		}
+	</script>
+</head>
+<body>
+
+	<div class="theme-box">
+		<div class="theme-1" onmouseover="changetheme1()" onmouseout="changenormal()"></div>
+		<div class="theme-2" onmouseover="changetheme2()" onmouseout="changenormal()"></div>
+		<div class="theme-3" onmouseover="changetheme3()" onmouseout="changenormal()"></div>
+	</div>
+
+	<marquee scrollamount="50" behavior="scroll" direction="left" height="200" width="50%" onmouseover="stop()" onmouseout="start()">
+		<img src="../images/pic1.jpg" width="200">
+	</marquee>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+
+</body>
+</html>

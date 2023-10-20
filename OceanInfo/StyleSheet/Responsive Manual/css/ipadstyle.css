@@ -1,0 +1,21 @@
+@media all and (max-width: 1000px)
+{
+	header, nav, main, footer
+	{
+		width: 90%;
+	}
+
+	header
+	{
+		background: orange;
+		text-align: left;
+		font-size: 1em;
+		color: white;
+	}
+
+	nav
+	{
+		background: red;
+		color: yellow;
+	}
+}

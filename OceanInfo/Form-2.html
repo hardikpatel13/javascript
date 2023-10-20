@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form action="Table.html" method="post">
+
+		<fieldset>
+			<legend>Personal Information</legend>
+			<p>
+				First Name 		:		<input type="text" name="fname">
+			</p>
+
+			<p>
+				Middle Name 		:		<input type="text" name="mname">
+			</p>
+
+			<p>
+				<label for="lname">Last Name 			:</label> 		<input type="text" name="lname" id="lname">
+			</p>
+		</fieldset>
+
+		<br>
+		<fieldset>
+			<p>
+				Product List 		:		<input list="product" name="">
+											<datalist id="product">
+												<option value="Mouse">
+												<option value="Pen Drive">
+												<option value="Key Board">
+												<option value="Pencil">
+												<option value="Pen">
+											</datalist>
+			</p>
+
+			<p>
+				Course List 		:		<select>
+												<option>-Select One-</option>
+												<optgroup label="Programing Courses">
+													<option>C</option>
+													<option>C++</option>
+													<option>Java</option>
+												</optgroup>
+
+												<optgroup label="Graphics Courses">
+													<option>Photoshop</option>
+													<option>PageMaker</option>
+													<option>Indesign</option>
+												</optgroup>
+											</select>
+			</p>
+
+			<p>
+				Age 				:		<input type="number" name="" min="10" max="100" step="10">
+			</p>
+		</fieldset>
+
+		<br>
+		<fieldset>
+			<input type="submit" name="">
+		</fieldset>
+
+
+		
+	</form>
+
+</body>
+</html>

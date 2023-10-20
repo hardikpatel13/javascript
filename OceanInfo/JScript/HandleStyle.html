@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#salary-box
+		{
+			border: solid 1px black;
+			width: 300px;
+			padding:15px;
+			margin: 15px;
+			display: none;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function getsalary()
+		{
+			var salary, hra, pf, net;
+
+			salary = parseInt(document.getElementById('salary').value);
+			hra = salary*35/100;
+			pf = salary*12/100;
+			net = salary+hra-pf;
+
+			document.getElementById('hrabox').innerHTML = hra;
+			document.getElementById('pfbox').innerHTML = pf;
+			document.getElementById('netbox').innerHTML = net;
+
+			document.getElementById('salary-box').style.display="block";
+		}
+
+		function cleardata()
+		{
+			document.getElementById('salary').value="";
+			document.getElementById('salary-box').style.display="none";
+		}
+	</script>
+</head>
+<body>
+
+	<p>
+		Basic Salary : <input type="text" name="salary" id="salary"> 
+						<input type="button" name="btn" id="btn" value="Get Salary" onclick="getsalary()" ondblclick="cleardata()">
+	</p>
+
+	<div id="salary-box">
+		<p>House Rent Allowance (35%) : <span id="hrabox">0000</span></p>
+		<p>Provident Fund (12%) : <span id="pfbox">0000</span></p>
+		<p>Net Salary : <span id="netbox">0000</span></p>
+	</div>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+</body>
+</html>

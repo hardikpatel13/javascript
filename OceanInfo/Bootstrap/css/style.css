@@ -1,0 +1,30 @@
+*
+{
+	transition: all 0.3s ease 0s;
+}
+body
+{
+	/*background: lightyellow;*/
+}
+
+.container
+{
+	border:solid 1px red;
+}
+
+.table-primary
+{
+	--bs-table-bg: yellowgreen;
+}
+
+.img-thumbnail
+{
+	border:solid 1px yellowgreen;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+.display-7
+{
+	font-size: 1.5rem;
+}

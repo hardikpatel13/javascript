@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		// Relational Operator
+		// -----------------------------------------
+		// ==   <     <=    >    >=   <>
+
+		// Logical Operator
+		// -----------------------------------------
+		// &&		and
+		// ||		or 
+		// != 		not
+
+		// Syntax of If
+		// ---------------------------
+
+		// if(Condition)
+		// {
+		// 	Statements 1;
+		// }
+
+		// else
+		// {
+		// 	Statements 2;
+		// }
+
+
+		function getsalary()
+		{
+			var salary, bonus=0, net;
+
+			salary= parseInt(document.getElementById('salary').value);
+
+			if (salary>=10000) 
+			{
+				bonus = salary * 15/100;
+			}
+
+			net = salary + bonus;
+
+			document.getElementById('bonus').value = bonus;
+			document.getElementById('net').value = net;
+		}
+
+		function getstatus()
+		{
+			var eng, message;
+
+			eng = parseInt(document.getElementById('english').value);
+
+			if (eng>=35) 
+			{
+				message = "Congratulation ! You are Pass";
+				document.getElementById('page').style.background="green";
+			}
+
+			else
+			{
+				message = "Sorry ! You are Fail....";
+				document.getElementById('page').style.background="red";
+			}
+
+			document.getElementById('result-area').innerHTML=message;
+
+		}
+
+	</script>
+</head>
+<body id="page">
+
+	<h2>Example 1 <small>(Single If Condition)</small></h2>
+	<p>
+		Enter Your Basic Salary : 	<input type="text" name="salary" id="salary">
+									<input type="button" value="Get Net Salary" onclick="getsalary()">
+	</p>
+
+	<p>
+		Bonus					 : 	<input type="text" name="bonus" id="bonus" readonly="readonly">
+	</p>
+
+	<p>
+		Net Salary				 : 	<input type="text" name="net" id="net" readonly="readonly">
+	</p>
+
+
+	<hr>
+
+	<h2>Example 2 <small>(If Else Condition)</small></h2>
+
+	<p>
+		Enter Your English Marks  : 	<input type="text" name="english" id="english">
+									<input type="button" value="Get Status" onclick="getstatus()">
+	</p>
+
+	<p id="result-area">
+		Your Result Status Here........
+	</p>
+
+</body>
+</html>

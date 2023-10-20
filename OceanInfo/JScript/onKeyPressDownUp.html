@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		label
+		{
+			width: 150px;
+			display: inline-block;
+		}
+
+		input
+		{
+			border-radius: 5px;
+			border: solid 1px silver;
+			padding: 5px;
+
+		}
+	</style>
+	<script type="text/javascript">
+		function getamount(data)
+		{
+			var npl, dlr;
+
+			npl = parseFloat(data) * 1.60;
+			dlr = parseFloat(data) / 82.45;
+
+			document.getElementById('npl').value = npl;
+			document.getElementById('dlr').value = dlr;
+		}
+	</script>
+</head>
+<body>
+
+	<p>
+	<label>Indian Rupees 	:</label>		<input type="text" name="inr" id="inr" onkeyup="getamount(this.value)">
+	</p>
+
+	<p>
+		<label>Nepal Rupee 	:</label>		<input type="text" name="npl" id="npl" readonly="readonly">
+	</p>
+
+	<p>
+		<label>Us Dollar 		:</label>		<input type="text" name="dlr" id="dlr" readonly="readonly">
+	</p>
+
+</body>
+</html>

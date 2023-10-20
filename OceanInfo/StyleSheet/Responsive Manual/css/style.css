@@ -1,0 +1,54 @@
+*
+{
+	transition: all 0.3s ease 0s;
+}
+body
+{
+	font-family: Cambria;
+}
+
+header, nav, main, footer
+{
+	border:solid 1px black;
+	margin: 10px auto;
+	padding: 15px;
+	width: 80%;
+}
+
+header
+{
+	background:yellowgreen;
+	text-align: center;
+}
+
+nav
+{
+	background:DarkGreen;
+	overflow: auto;
+}
+
+nav ul
+{
+	list-style-type: none;
+}
+
+nav li
+{
+	float: left;
+}
+
+nav a
+{
+	padding: 0px 25px;
+	text-decoration: none;
+	color: white;
+}
+
+footer
+{
+	background:DarkSlateBlue;
+	color: white;
+	text-align: center;
+}
+
+

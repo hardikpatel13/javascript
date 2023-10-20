@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function changecolor(data)
+		{
+			document.bgColor=data;
+		}
+
+		function changesize(data)
+		{
+			var fontsize;
+			fontsize = data + "px";
+
+			document.getElementById('size-box').innerHTML=fontsize;
+			document.getElementById('content').style.fontSize=fontsize;
+		}
+
+
+	</script>
+</head>
+<body>
+
+	<p>
+		Selecect Theme Color 	: 	<input type="color" name="color-box" id="color-box" oninput="changecolor(this.value)">
+	</p>
+
+	<p>
+		Selecect Font Size 		: 	<input type="range" name="font-box" id="font-box" min="10" max="100" value="16" oninput="changesize(this.value)"> 
+		<span id="size-box">16px</span>
+	</p>
+
+
+	<hr>
+
+	<h2>onInput Event</h2>
+	<p id="content">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+
+
+</body>
+</html>

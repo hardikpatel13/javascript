@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.error-box
+		{
+			border:solid 1px red;
+			background: lightyellow;
+			color: red;
+			padding: 15px;
+			width: 30%;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		function checkdata(frm)
+		{
+			var fname, age, mobile, error, status;
+			fname = frm.firstname.value;
+			age = frm.age.value;
+			mobile = frm.mobileno.value;
+			status = true;
+			error = [];
+
+			if(fname=="")
+			{
+				error[error.length] = "First Name is Required. Please ! Enter Valid First Name";
+				status = false;
+			}
+
+			else if(checklength(fname)==false)
+			{
+				error[error.length] = "Invalid First Name. Please ! Enter Valid First Name";
+				status = false;
+			}
+
+
+			if(age=="")
+			{
+				error[error.length] = "Age is Required. Please ! Enter Valid Age";
+				status = false;
+			}
+
+			else if(/^[0-9]{2}$/.test(age)==false)
+			{
+				error[error.length] = "Invalid Age Value. Please ! Enter Valid Age";
+				status = false;
+			}
+
+
+			if(mobile=="")
+			{
+				error[error.length] = "Mobile No is Required. Please ! Enter Valid Age";
+				status = false;
+			}
+			else if(/^[0-9]{10}$/.test(mobile)==false)
+			{
+				error[error.length] = "Invalid Mobile No. Please ! Enter Valid Mobile No.";
+				status = false;
+			}
+
+			
+
+
+
+			if (status==false) 
+			{
+				showerror(error);
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+
+		}
+
+
+
+		function checklength(data)
+		{
+			if(data.length>=6 && data.length<=25)
+			{
+				return true;
+			}
+
+			else
+			{
+				return false;
+			}
+		}
+
+		function showerror(error)
+		{
+			var message = "<h2>Some Problems</h2>";
+			var x, srno=1;
+
+			for(x=0; x<error.length; x++)
+			{
+				message = message + srno+ ") " +  error[x] + "<br>";
+				// message += +srno+ ") " +  error[x] + "<br>";
+
+				srno++;
+			}
+
+			document.getElementById('error-summary').innerHTML= message;
+			document.getElementById('error-summary').style.display= "block";
+		}
+	</script>
+</head>
+<body>
+
+	<form action="Loop.html" method="post" onsubmit="return checkdata(this)">
+		<p>
+			First Name 	:	<input type="text" name="firstname" id="firstname">
+		</p>
+
+		<p>
+			Age 		:	<input type="text" name="age" id="age">
+		</p>
+
+		<p>
+			Mobile No. 	:	<input type="text" name="mobileno" id="mobileno">
+		</p>
+
+		<p>
+			<input type="submit" name="btnsubmit" value="Register Now">
+		</p>
+	</form>
+
+	<p id="error-summary" class="error-box">
+		
+	</p>
+
+</body>
+</html>
